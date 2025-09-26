@@ -113,8 +113,8 @@
 		<div class="page_loader"></div>
 
 		<!-- Top header start -->
-		
-        {% include 'includes/topbar.html' %}
+
+		{% include 'includes/topbar.html' %}
 
 		<!-- Top header end -->
 
@@ -122,7 +122,25 @@
 
 		<!-- Main header start -->
 
-		{% block content %} {% endblock %} {% include 'includes/footer.html' %}
+		{% block content %} {% endblock %}
+
+		<!-- Full Page Search -->
+		<div id="full-page-search">
+			<button type="button" class="close">×</button>
+			<form
+				action="https://storage.googleapis.com/theme-vessel/carhouse/index.html#"
+				class="search-header"
+			>
+				<input
+					type="search"
+					value=""
+					placeholder="type keyword(s) here. Eg: audi, benz etc"
+				/>
+				<button type="submit" class="btn btn-sm button-theme">Search</button>
+			</form>
+		</div>
+
+		{% include 'includes/footer.html' %}
 
 		<script src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
 		<script src="{% static 'js/popper.min.js' %}"></script>
