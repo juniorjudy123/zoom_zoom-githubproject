@@ -1193,256 +1193,180 @@
 				class="row slick-carousel"
 				data-slick='{"slidesToShow": 4, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'
 			>
+				{% for team in teams %}
 				<div class="slick-slide-item">
 					<div class="team-1">
 						<div class="photo">
 							<a href="#">
 								<img
-									src="img/avatar/avatar-12.jpg"
+									src="{{team.photo.url}}"
+									target="_blank"
 									alt="team-1"
 									class="img-fluid"
 								/>
 							</a>
 							<div class="social-list clearfix">
-								<a href="#" class="facebook-bg"
+								<a
+									href="{{team.facebook_link}}"
+									target="_blank"
+									class="facebook-bg"
 									><i class="fa fa-facebook"></i
 								></a>
-								<a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
-								<a href="#" class="google-bg"><i class="fa fa-google"></i></a>
+								<a
+									href="{{team.twitter_link}}"
+									target="_blank"
+									class="twitter-bg"
+									><i class="fa fa-twitter"></i
+								></a>
+								<a
+									href="{{team.google_plus_link}}"
+									target="_blank"
+									class="google-bg"
+									><i class="fa fa-google"></i
+								></a>
 							</div>
 						</div>
 						<div class="details">
-							<h4><a href="team-detail.html">Brandon Miller</a></h4>
-							<h5>Manager</h5>
+							<h4>
+								<a href="team-detail.html"
+									>{{team.first_name}} {{team.last_name}}</a
+								>
+							</h4>
+							<h5>{{team.designation}}</h5>
 						</div>
 					</div>
 				</div>
-				<div class="slick-slide-item">
-					<div class="team-1">
-						<div class="photo">
-							<a href="#">
-								<img
-									src="img/avatar/avatar-9.jpg"
-									alt="team-1"
-									class="img-fluid"
-								/>
-							</a>
-							<div class="social-list clearfix">
-								<a href="#" class="facebook-bg"
-									><i class="fa fa-facebook"></i
-								></a>
-								<a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
-								<a href="#" class="google-bg"><i class="fa fa-google"></i></a>
-							</div>
-						</div>
-						<div class="details">
-							<h4><a href="team-detail.html">Michelle Nelson</a></h4>
-							<h5>Support Manager</h5>
-						</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<!-- Our team end -->
+
+	<!-- Intro section start -->
+	<div class="intro-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9 col-md-8 col-sm-12">
+					<div class="intro-text">
+						<h3>Do You Have Questions ?</h3>
 					</div>
 				</div>
-				<div class="slick-slide-item">
-					<div class="team-1">
-						<div class="photo">
-							<a href="#">
-								<img
-									src="img/avatar/avatar-11.jpg"
-									alt="team-1"
-									class="img-fluid"
-								/>
-							</a>
-							<div class="social-list clearfix">
-								<a href="#" class="facebook-bg"
-									><i class="fa fa-facebook"></i
-								></a>
-								<a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
-								<a href="#" class="google-bg"><i class="fa fa-google"></i></a>
-							</div>
-						</div>
-						<div class="details">
-							<h4><a href="team-detail.html">Stone Carolyn</a></h4>
-							<h5>Creative Director</h5>
-						</div>
-					</div>
-				</div>
-				<div class="slick-slide-item">
-					<div class="team-1">
-						<div class="photo">
-							<a href="#">
-								<img
-									src="img/avatar/avatar-10.jpg"
-									alt="team-1"
-									class="img-fluid"
-								/>
-							</a>
-							<div class="social-list clearfix">
-								<a href="#" class="facebook-bg"
-									><i class="fa fa-facebook"></i
-								></a>
-								<a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
-								<a href="#" class="google-bg"><i class="fa fa-google"></i></a>
-							</div>
-						</div>
-						<div class="details">
-							<h4><a href="team-detail.html">Martin Smith</a></h4>
-							<h5>Web Developer</h5>
-						</div>
-					</div>
-				</div>
-				<div class="slick-slide-item">
-					<div class="team-1">
-						<div class="photo">
-							<a href="#">
-								<img
-									src="img/avatar/avatar-11.jpg"
-									alt="team-1"
-									class="img-fluid"
-								/>
-							</a>
-							<div class="social-list clearfix">
-								<a href="#" class="facebook-bg"
-									><i class="fa fa-facebook"></i
-								></a>
-								<a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
-								<a href="#" class="google-bg"><i class="fa fa-google"></i></a>
-							</div>
-						</div>
-						<div class="details">
-							<h4><a href="team-detail.html">Stone Carolyn</a></h4>
-							<h5>Creative Director</h5>
-						</div>
-					</div>
+				<div class="col-lg-3 col-md-4 col-sm-12">
+					<a href="contact.html" class="btn btn-md">Get in Touch</a>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<!-- Our team end -->
+	<!-- Intro section end -->
 
-<!-- Intro section start -->
-<div class="intro-section">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-9 col-md-8 col-sm-12">
-				<div class="intro-text">
-					<h3>Do You Have Questions ?</h3>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-12">
-				<a href="contact.html" class="btn btn-md">Get in Touch</a>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- Intro section end -->
+	<!-- Footer start -->
 
-<!-- Footer start -->
+	<!-- Footer end -->
 
-<!-- Footer end -->
-
-<!-- Car Overview Modal -->
-<div class="car-model-2">
-	<div
-		class="modal fade"
-		id="carOverviewModal"
-		tabindex="-1"
-		role="dialog"
-		aria-labelledby="carOverviewModalLabel"
-		aria-hidden="true"
-	>
-		<div class="modal-dialog modal-lg" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<div class="modal-title" id="carOverviewModalLabel">
-						<h4>Explore Your Dream Car</h4>
-						<h5><i class="flaticon-pin"></i> 123 Kathal St. Tampa City,</h5>
+	<!-- Car Overview Modal -->
+	<div class="car-model-2">
+		<div
+			class="modal fade"
+			id="carOverviewModal"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="carOverviewModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title" id="carOverviewModalLabel">
+							<h4>Explore Your Dream Car</h4>
+							<h5><i class="flaticon-pin"></i> 123 Kathal St. Tampa City,</h5>
+						</div>
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
 					</div>
-					<button
-						type="button"
-						class="close"
-						data-dismiss="modal"
-						aria-label="Close"
-					>
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="row modal-raw">
-						<div class="col-lg-6 modal-left">
-							<div class="item active">
-								<img
-									src="img/car-13.jpg"
-									alt="best-car"
-									class="img-fluid modalLabel-1"
-								/>
-								<img
-									src="img/car-14.jpg"
-									alt="best-car"
-									class="img-fluid modalLabel-2"
-								/>
-								<div class="sobuz">
-									<div class="price-box" style="padding-bottom: 5px">
-										<span class="del-2">$1050.00</span>
+					<div class="modal-body">
+						<div class="row modal-raw">
+							<div class="col-lg-6 modal-left">
+								<div class="item active">
+									<img
+										src="img/car-13.jpg"
+										alt="best-car"
+										class="img-fluid modalLabel-1"
+									/>
+									<img
+										src="img/car-14.jpg"
+										alt="best-car"
+										class="img-fluid modalLabel-2"
+									/>
+									<div class="sobuz">
+										<div class="price-box" style="padding-bottom: 5px">
+											<span class="del-2">$1050.00</span>
+										</div>
+										<div class="">
+											<a
+												href="car-details.html"
+												class="btn btn-md btn-round btn-theme"
+												>Convertible</a
+											>
+										</div>
 									</div>
-									<div class="">
+								</div>
+							</div>
+							<div class="col-lg-6 modal-right">
+								<div class="modal-right-content">
+									<section>
+										<h3>Features</h3>
+										<div class="features">
+											<ul class="bullets">
+												<li>Cruise Control</li>
+												<li>Airbags</li>
+												<li>Air Conditioning</li>
+												<li>Alarm System</li>
+												<li>Audio Interface</li>
+												<li>CDR Audio</li>
+												<li>Seat Heating</li>
+												<li>ParkAssist</li>
+											</ul>
+										</div>
+									</section>
+									<section>
+										<h3>Overview</h3>
+										<ul class="bullets">
+											<li>Model</li>
+											<li>Year</li>
+											<li>Condition</li>
+											<li>Price</li>
+											<li>Audi</li>
+											<li>2020</li>
+											<li>Brand New</li>
+											<li>$178,000</li>
+										</ul>
+									</section>
+									<div class="description">
+										<h3>Description</h3>
+										<p>
+											Lorem Ipsum is simply dummy text of the printing and
+											typesetting industry. Lorem Ipsum has been the industry's
+											standard.
+										</p>
 										<a
 											href="car-details.html"
 											class="btn btn-md btn-round btn-theme"
-											>Convertible</a
+											>Show Detail</a
 										>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6 modal-right">
-							<div class="modal-right-content">
-								<section>
-									<h3>Features</h3>
-									<div class="features">
-										<ul class="bullets">
-											<li>Cruise Control</li>
-											<li>Airbags</li>
-											<li>Air Conditioning</li>
-											<li>Alarm System</li>
-											<li>Audio Interface</li>
-											<li>CDR Audio</li>
-											<li>Seat Heating</li>
-											<li>ParkAssist</li>
-										</ul>
-									</div>
-								</section>
-								<section>
-									<h3>Overview</h3>
-									<ul class="bullets">
-										<li>Model</li>
-										<li>Year</li>
-										<li>Condition</li>
-										<li>Price</li>
-										<li>Audi</li>
-										<li>2020</li>
-										<li>Brand New</li>
-										<li>$178,000</li>
-									</ul>
-								</section>
-								<div class="description">
-									<h3>Description</h3>
-									<p>
-										Lorem Ipsum is simply dummy text of the printing and
-										typesetting industry. Lorem Ipsum has been the industry's
-										standard.
-									</p>
-									<a
-										href="car-details.html"
-										class="btn btn-md btn-round btn-theme"
-										>Show Detail</a
-									>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	{% endblock %}
 </div>
-{% endblock %}
