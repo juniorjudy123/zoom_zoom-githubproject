@@ -1,4 +1,8 @@
-{% extends 'base.html' %} {% block content %} {% load static %}
+<!-- prettier-ignore -->
+{% extends 'base.html' %} 
+{% load static %} 
+{% load humanize %}
+{% block content %}
 
 <!-- Banner start -->
 <div class="banner" id="banner">
@@ -181,7 +185,7 @@
 							<a href="" class="car-img">
 								<div class="tag-2">Featured</div>
 								<div class="price-box">
-									<span>${{car.price}}</span>
+									<span>${{car.price | intcomma}}</span>
 								</div>
 								<img
 									class="d-block w-100"
@@ -230,7 +234,7 @@
 							</div>
 							<ul class="facilities-list clearfix">
 								<li>{{car.fuel_type}}</li>
-								<li>{{car.miles}}km</li>
+								<li>{{car.miles | intcomma}}km</li>
 								<li>{{car.transmission}}</li>
 								<li>{{car.body_style}}</li>
 								<li>{{car.color}}</li>
@@ -278,7 +282,8 @@
 							<div class="facilities-list clearfix">
 								<ul>
 									<li>
-										<span><i class="flaticon-way"></i></span>{{car.miles}}km
+										<span><i class="flaticon-way"></i></span
+										>{{car.miles|intcomma}}km
 									</li>
 									<li>
 										<span><i class="flaticon-calendar-1"></i></span>{{car.year}}
@@ -338,7 +343,7 @@
 							<p class="cartype">{{car.body_style}}</p>
 						</div>
 						<div class="pull-right">
-							<p class="price">${{car.price}}</p>
+							<p class="price">${{car.price | intcomma}}</p>
 						</div>
 					</div>
 				</div>
@@ -538,5 +543,6 @@
 			</div>
 		</div>
 	</div>
-	{% endblock %}
 </div>
+
+{% endblock %}
